@@ -1,0 +1,38 @@
+* Running with nix flakes
+
+The command below starts the =w4= CLI tool:
+
+#+caption: Starting w4
+#+name: w4-run
+#+begin_src bash :eval never
+  nix run
+#+end_src
+
+* Creating nix files with node2nix
+
+The =package.json= file describes the =npm= packages we want to manage with
+=nix=.
+
+#+caption: package.json
+#+name: package-json
+#+begin_src json :tangle package.json
+  [
+      "wasm4"
+  ]
+#+end_src
+
+Now we can generate the following =nix= files with the help of the =node2nix=
+tool:
+- =default.nix=
+- =node-env.nix=
+- =node-packages.nix=
+
+The following command generates these files:
+
+#+caption: Generating files with node2nix
+#+name: run-node2nix
+#+begin_src bash :results output
+  nix develop --command node2nix --nodejs-16
+#+end_src
+
+#+RESULTS: run-node2nix
