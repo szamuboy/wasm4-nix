@@ -5,7 +5,7 @@ The command below starts the =w4= CLI tool:
 #+caption: Starting w4
 #+name: w4-run
 #+begin_src bash :eval never
-  nix run
+  nix run github:szamuboy/wasm4-nix
 #+end_src
 
 * Creating nix files with node2nix
