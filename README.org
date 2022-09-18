@@ -17,7 +17,7 @@ The =package.json= file describes the =npm= packages we want to manage with
 #+name: package-json
 #+begin_src json :tangle package.json
   [
-      "wasm4"
+      "wasm4", "graceful-fs"
   ]
 #+end_src
 
@@ -32,7 +32,5 @@ The following command generates these files:
 #+caption: Generating files with node2nix
 #+name: run-node2nix
 #+begin_src bash :results output
-  nix develop --command node2nix --nodejs-16
+  nix develop --command node2nix --nodejs-14
 #+end_src
-
-#+RESULTS: run-node2nix
