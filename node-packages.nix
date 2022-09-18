@@ -1263,4 +1263,22 @@ in
     bypassCache = true;
     reconstructLock = true;
   };
+  graceful-fs = nodeEnv.buildNodePackage {
+    name = "graceful-fs";
+    packageName = "graceful-fs";
+    version = "4.2.10";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz";
+      sha512 = "9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==";
+    };
+    buildInputs = globalBuildInputs;
+    meta = {
+      description = "A drop-in replacement for fs, making various improvements.";
+      homepage = "https://github.com/isaacs/node-graceful-fs#readme";
+      license = "ISC";
+    };
+    production = true;
+    bypassCache = true;
+    reconstructLock = true;
+  };
 }
