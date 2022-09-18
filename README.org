@@ -1,4 +1,12 @@
-* Running with nix flakes
+* Nix prerequisites
+
+If you want to use this Nix flake, obviously, you need to enable Nix flakes.
+See[[ https://nixos.wiki/wiki/Flakes#Enable_flakes]].
+
+You also need to have a recent version of the =nix= CLI tool. Version 2.7 or
+newer is expected to work.
+
+* Running with Nix flakes
 
 The command below starts the =w4= CLI tool:
 
@@ -21,7 +29,7 @@ The =package.json= file describes the =npm= packages we want to manage with
   ]
 #+end_src
 
-Now we can generate the following =nix= files with the help of the =node2nix=
+Now we can generate the following =Nix= files with the help of the =node2nix=
 tool:
 - =default.nix=
 - =node-env.nix=
